@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    color: rgb(185, 123, 247);
+}
+p::first-line {
+    color: #ad0391;
+    font-variant: small-caps;
+}
+.texto__uno::after{
+    content: "ʕ•́ᴥ•̀ʔっ♡";
+    color: rgb(48, 150, 116);
+}
+
+.texto__dos::before{
+    content: "(>‿◠)✌";
+    color: rgb(54, 66, 62);
+}
+
+.texto__tres::first-letter{
+    font-size: 200%;
+    color: #994444; font-weight: bold;
+}
+
+.texto__cuatro::first-line {
+    color: rgba(255, 0, 64, 0.438);
+}
+
+.texto__cinco::-moz-selection { color: rgb(255, 255, 255);  background: rgb(0, 0, 0); }
+.texto__cinco::selection      { color: rgb(255, 248, 248);  background: rgb(0, 0, 0); }
+
+.texto__seis::backdrop {
+    background: rgba(255,0,0,.25);
+}
+
+ input{
+    color: rgb(10, 10, 10);
+    font-size: 1.5em;
+}
+ul li::marker {
+    font-size: 150%;
+    color: rgb(0, 0, 0);
+}    
+::spelling-error  {
+    text-decoration: wavy red;
+}
+
+::grammar-error  {
+    text-decoration: underline rgb(255, 145, 0);
+    color: rgb(18, 175, 31);
+  }

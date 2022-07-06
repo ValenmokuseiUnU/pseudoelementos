@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pseudoselementos</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <!--link css-->
+        <link rel="stylesheet" href="css/styles.css">
+        <!--link favicon-->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body style="background-color: rgb(213, 223, 236);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-xxl-6 col-ms-12 col-md-6 col-lg-6">
+                    <h1>after</h1>
+                    <div class="texto__uno">
+                        <p class="texto__uno">after crea un pseudo-elemento que es el último hijo del elemento seleccionado. A menudo se usa para agregar contenido cosmético a un elemento con la propiedad de content . Está en línea por defecto.</p>
+
+                            <h6>a::after {</h6>
+                            <h6>content: "→";</h6>  
+                            <h6>}</h6>
+                    </div>
+                </div>
+                <div class="col-xs12 col-xxl-6 col-md-4 col-lg-4"> 
+                    <h1>before</h1>
+                    <div class="texto__dos">
+                            <p class="texto__dos">
+                                Aparte de first-line y first-letter, en las especificaciones de CSS 2 existen otros pseudo elementos que voy a nombrar para conocimiento de los lectores, aunque profundizaré en su uso. Se tratan de before y after y sirven para insertar "contenidos generados" antes y después del elemento al que asignemos estos pseudo-element.
+                                <p>Un ejemplo de ello es:</p>
+
+                                <h6>P.nota:before {</h6> 
+                              	<h6>content: "Nota: "</h6>
+                                <h6>}</h6>
+                            </p>
+                    </div>
+                </div>
+                <div class="col-xs12 col-xxl-6 col-md-4 col-lg-4"> 
+                    <h1>first-letter</h1>
+                    <div class="texto__tres">
+                            <p class="texto__tres">
+                                Un efecto habitual de algunas publicaciones, por ejemplo las de cuentos para niños, es hacer más grande la primera letra de una página y decorarla de alguna manera. Con CSS podemos aplicar estilos específicos y hacer, por ejemplo, que esa primera letra sea más grande y tenga un color distinto del resto del párrafo.
+                                <p>Se utiliza de esta manera:</p>
+
+                                <h6>P:first-letter {</h6> 
+                                <h6>font-size: 200%;</h6>
+                                <h6>color: #993333; font-weight: bold; </h6>
+                                <h6>}</h6>
+                            </p>
+                    </div>
+                </div>
+                <div class="col-xs12 col-xxl-6 col-md-4 col-lg-4"> 
+                    <h1>firt-line</h1>
+                    <div class="texto__cuatro">
+                            <p class="texto__cuatro">
+                                El Pseudoelemento ::first-line aplica estilos a la primera línea de un elemento de bloque. Nótese que la longitud de la primera línea depende de muchos factores, incluyendo el ancho del elemento, el ancho del documento y el tamaño de fuente del texto.
+                                <p>Se utiliza de esta manera:</p>
+
+                                <h6>/* Selecciona la primera línea de un <p> */</h6>
+                                <h6>p::first-line {</h6>
+                                <h6>color: red;</h6>
+                                <h6><div class=""></div></h6>
+                            </p>
+                    </div>
+                </div>
+                <div class="col-xs12 col-xxl-6 col-md-4 col-lg-4"> 
+                    <h1>selection</h1>
+                           <p class="texto__cinco">
+                                El selector ::selection CSS pseudo-elemento aplica reglas a una porción de un documento que ha sido destacado (por ejemplo: selección con el mouse o algún otro puntero en un dispositivo) del usuario.
+                                <p>ejemplo</p>
+                                Devido a el factor que las reglas de análisis de CSS requieren dejar caer la regla general cuando encuentre un pseudo elemento inválido, dos reglas deben ser escritas: ::-moz-selection, ::selection {...}. La regla debe soltada en non-Gecko como ::-moz-selection es inválido en esto.
+                           </p>
+                </div>
+                <div class="col-xs12 col-xxl-6 col-md-4 col-lg-4"> 
+                    <h1>backdrop</h1>
+                    <div class="texto__seis">
+                            <p class="texto__seis">
+                                se puede usar para crear un fondo que oculte el documento subyacente detrás de la pila de la capa superior, p.ej., para el elemento que es mostrado a pantalla complete tal  y como se describe en esta especificación.
+                                No se hereda ni es heredado de ningún elemento. Tampoco se hacen restricciones sobre qué propiedades se aplican a este pseudo-elemento.
+                                <p>Se utiliza de esta manera:</p>
+                                <h6>::backdrop {</h6>
+                                <h6>background: rgba(255,0,0,.25);</h6>    
+                                <h6>}</h6>  
+                            </p>
+                    </div>
+                </div>
+                <div class="col-xs12 col-xxl-6 col-md-4 col-lg-4"> 
+                    <h1>placeholder</h1>
+                      <div class="input contanier">
+                          <div class="texto__siete">
+                                <p class="texto__siete">
+                                    El pseudo-elemento CSS  ::placeholder representa el texto provisional en un elemento input o un elemento textarea.
+                                    Solo el subconjuto de las propiedades CSS que aplican al pseudo-elemento ::first-line puede ser usado en una regla utilizando ::placeholder en su selector.
+                                    <p>Se utiliza de esta manera:</p>
+                                    <h6 >::placeholder{</h6>
+                                    <h6>color: blue;</h6>    
+                                    <h6>font-size: 1.5em;</h6>
+                                    <h6>}</h6> 
+                                </p>
+                           </div>
+                    </div>
+                </div>
+                <div class="col-xs12 col-xxl-6 col-md-4 col-lg-4"> 
+                    <h1>marker</h1>
+                    <div class="texto__ocho">
+                            <ul class="texto__ocho">
+                                El pseudo-elemento ::marker en CSS selecciona la caja de marcadores de un elemento de la lista, que normalmente contiene una viñeta o un número. Funciona en cualquier elemento o pseudo-elemento configurado para display: list-item, como el elemento li y summary.
+                                <p>Se utiliza de esta manera:</p>
+                                <h6>ul li::marker {</h6>
+                                <h6>font-size: 150%;</h6>
+                                <h6>color: rgb(0, 0, 0);</h6>
+                                <h6>}</h6>
+                                <li>A</li>    
+                                <li>B</li>   
+                                <li>C</li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="col-xs12 col-xxl-6 col-md-4 col-lg-4"> 
+                    <h1>spelling-error</h1>
+                    <div class="texto__nueve">
+                            <p contenteditable spellcheck="texto__nueve">
+                                ::spelling-error representa un segmento de texto que el user agent (en-US) ha marcado como deletreado incorrectamente, Solo se puede usar un pequeño subconjunto de propiedades de CSS en una regla con ::spelling-error en su selector
+                                <p>Se utiliza de esta manera:</p>
+                                <h6>::spelling-error  {</h6>
+                                <h6>text-decoration: wavy red;</h6>
+                                <h6>}</h6>
+                            </p>
+                    </div>
+                </div>
+                <div class="col-xs12 col-xxl-6 col-md-4 col-lg-4"> 
+                    <h1>grammar-error</h1>
+                    <div class="texto__diez">
+                            <p>
+                            ::grammar-error representa un segmento de texto que el agente de usuario ha marcado como gramaticalmente incorrecto.
+                            <p>Se utiliza de esta manera:</p>
+                            <h6>::grammar-error  {</h6>
+                            <h6>text-decoration: underline rgb(255, 145, 0);</h6>
+                            <h6>color: rgb(18, 175, 31);</h6>
+                            <h6>}</h6>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!-- JavaScript Bundle with Popper -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+ </body>
+</html>
